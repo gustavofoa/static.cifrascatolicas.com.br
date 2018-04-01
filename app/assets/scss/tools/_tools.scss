@@ -1,0 +1,61 @@
+// Pode ser qualquer coisa, desde mixins de font-face, até mixins de animações, etc
+
+@font-face {
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../fonts/Montserrat-Regular.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat'), local('Montserrat-Regular'),
+       url('../fonts/Montserrat-Regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Regular.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Regular.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Montserrat-Regular.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+@font-face {
+    
+  font-family: 'Montserrat';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../fonts/Montserrat-Bold.eot'); /* IE9 Compat Modes */
+  src: local('Montserrat Bold'), local('Montserrat-Bold'),
+       url('../../fonts/Montserrat-Bold.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('../fonts/Montserrat-Bold.woff2') format('woff2'), /* Super Modern Browsers */
+       url('../fonts/Montserrat-Bold.woff') format('woff'), /* Modern Browsers */
+       url('../fonts/Montserrat-Bold.ttf') format('truetype'), /* Safari, Android, iOS */
+}
+
+@mixin user-select() {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+@mixin clear() {
+    clear: both;
+
+    &:after,
+    &:before {
+        clear: both;
+        display: block;
+        content: "";
+    }
+}
+
+@mixin transform($transforms) {
+    -moz-transform: $transforms;
+    -o-transform: $transforms;
+    -ms-transform: $transforms;
+    -webkit-transform: $transforms;
+    transform: $transforms;
+}
+
+@mixin transition($x, $y) {
+	-webkit-transition: $x $y;
+	-moz-transition: $x $y;
+	-ms-transition: $x $y;
+	-o-transition: $x $y;
+	transition: $x $y;
+}

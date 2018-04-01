@@ -1,0 +1,132 @@
+.service-card {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border: 1px solid #ebebeb;
+    color: #fff;
+    cursor: pointer;
+    margin: 9px auto;
+    min-height: 300px;
+    padding: 30px 16px;
+    .itens {
+        padding: 5px;
+        position: relative;
+        z-index: 3;
+        >.title {
+            font-size: 1.5em;
+            text-shadow: 1px 1px 1px black;
+        }
+        >.separator {
+            border: solid 2px $azul-escuro;
+            margin: 20px 0;
+            width: 50%;
+        }
+        >.description {
+            text-shadow: 1px 1px 1px #000;
+        }
+        >.btn {
+            background-color: $azul-escuro;
+            border: solid 2px $azul-escuro;
+            color: #fff;
+            margin: 18px 0 0 0;
+            transition: all .5s ease;
+            &:hover {
+                background-color: #fff;
+                border: solid 2px $azul-escuro;
+                color: $azul-escuro;
+            }
+        }
+    }
+
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+.construction,
+.terraplanagem,
+.contencao,
+.saneamento,
+.consultoria,
+.laudo,
+.regularizacao {
+    &::after {
+        background: url('../img/pattern2.png') repeat;
+        content: "";
+        display: block;
+        height: 93%;
+        left: 16px;
+        position: absolute;
+        top: 10px;
+        width: 90%;
+    }
+}
+
+@media screen and (min-width: 768px) {
+    .service-card {
+        .itens {
+            >.btn {
+                margin: 18px 0 0 0;
+                transition: all .5s ease;
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .service-card {
+        .itens {
+            >.btn {
+                margin: 18px 0 0 0;
+                transition: all .5s ease;
+            }
+        }
+    }
+    .construction,
+    .terraplanagem,
+    .contencao,
+    .saneamento,
+    .consultoria,
+    .laudo,
+    .regularizacao {
+        &::after {
+            background: url(../img/pattern2.png) repeat;
+            content: "";
+            display: block;
+            height: 93%;
+            left: 16px;
+            position: absolute;
+            top: 10px;
+            width: 92%;
+        }
+    }
+}
+
+.construction {
+    background-image: url('../img/construcao-casa.jpg');
+}
+
+.terraplanagem {
+    background-image: url('../img/servico-terraplanagem.jpg');
+}
+
+.saneamento {
+    background-image: url('../img/servico-saneamento.jpg');
+}
+
+.contencao {
+    background-image: url('../img/servico-muro-contencao.jpg');
+}
+
+.consultoria {
+    background-image: url('../img/servico-consultoria.jpg');
+}
+
+.laudo {
+    background-image: url('../img/servico-laudo.jpg');
+}
+
+.regularizacao {
+    background-image: url('../img/servico-regularizacao.jpg');
+}

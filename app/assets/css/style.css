@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css?family=Kreon|Roboto");
+header .header {
+  background-color: #ffffff; }
+header .navbar-brand img {
+  width: 40px;
+  top: -10px;
+  position: relative; }
+header .navbar-toggle {
+  position: relative;
+  float: right;
+  padding: 9px 10px;
+  margin-top: 8px;
+  margin-right: 15px;
+  margin-bottom: 8px;
+  background-color: #C92C60;
+  background-image: none;
+  border: 1px solid #C92C60;
+  border-radius: 4px; }
+header .navbar-toggle .icon-bar {
+  background-color: #ffffff; }
+header .navbar-nav > li > a {
+  font-size: 1.3em; }
+
+.cv-girl {
+  -webkit-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.75); }
+  .cv-girl .navbar-default {
+    background-color: #f3c7d5 !important;
+    border-color: #f3c7d5; }
+  .cv-girl .navbar-brand {
+    color: #C92C60;
+    font-weight: bolder; }
+    .cv-girl .navbar-brand:hover {
+      color: #861d40; }
+  .cv-girl .navbar-default .navbar-nav > li > a {
+    color: #C92C60;
+    font-weight: bolder; }
+    .cv-girl .navbar-default .navbar-nav > li > a:hover {
+      color: #861d40; }
+
+@media only screen and (min-width: 768px) {
+  header .header {
+    background-color: rgba(255, 255, 255, 0); }
+
+  .header {
+    background-color: transparent;
+    border-color: transparent;
+    transition: all 0.5s ease-in-out; }
+
+  .header.active {
+    background-color: #ffffff !important;
+    -webkit-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    -moz-box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.25);
+    height: 40px; }
+
+  .navbar .navbar-nav > li > a {
+    color: #C92C60;
+    font-weight: bolder;
+    font-size: 1.4em;
+    transition: all 0.5s ease-in-out; }
+    .navbar .navbar-nav > li > a:hover {
+      background-color: rgba(201, 44, 96, 0.4);
+      color: #ffffff; } }
+footer {
+  border-top: solid 10px #232323; }
+  footer .footer-one {
+    background-color: #333;
+    color: #535353;
+    padding: 30px; }
+    footer .footer-one .logo img {
+      display: block;
+      margin: 0 auto 10px;
+      width: 100px; }
+    footer .footer-one .social {
+      text-align: center; }
+      footer .footer-one .social i {
+        font-size: 25px;
+        padding: 0 5px; }
+    footer .footer-one a {
+      color: #A2A2A2; }
+      footer .footer-one a:hover {
+        color: #C92C60; }
+    footer .footer-one .facebook iframe {
+      width: 100%; }
+  footer .footer-two {
+    background-color: #232323;
+    color: #555; }
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: 'Kreon', serif; }
+
+p,
+a,
+span,
+address {
+  font-family: 'Roboto', sans-serif; }
+
+i.fa {
+  font-weight: bolder; }
+
+.welcome-screen {
+  margin-top: 50px; }
+  .welcome-screen .text-welcome {
+    margin-top: 0px; }
+  .welcome-screen .welcome-text {
+    margin-top: 50px;
+    color: #ffffff;
+    text-shadow: 2px 2px 8px #000000;
+    font-size: 4em;
+    position: absolute;
+    margin: 0 auto;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1; }
+  .welcome-screen .text-one {
+    top: 220px; }
+  .welcome-screen .text-two {
+    border-bottom: solid 3px #C92C60;
+    border-top: solid 3px #2C5581;
+    font-weight: bolder;
+    top: 280px; }
+    .welcome-screen .text-two .colors {
+      color: #2C5581; }
+    .welcome-screen .text-two .da {
+      color: #b1cd49; }
+    .welcome-screen .text-two .life {
+      color: #C92C60; }
+  .welcome-screen .carousel-inner img {
+    border-bottom: solid 5px #2C5581;
+    width: 100%; }
+
+.about-us {
+  border-radius: 20%; }
+  .about-us .about-img img {
+    transform: translateX(40%);
+    width: 60%; }
+  .about-us .about-text p {
+    font-size: 1.25em;
+    text-align: justify; }
+
+.team {
+  background-color: #c7d1da;
+  border-bottom: solid 3px #2C5581;
+  border-top: solid 3px #2C5581; }
+
+.gallery .hide-bullets {
+  list-style: none;
+  margin-left: -40px;
+  margin-top: 20px; }
+.gallery .thumbnail {
+  padding: 0; }
+.gallery .carousel-inner > .item > img,
+.gallery .carousel-inner > .item > a > img {
+  width: 100%; }
+
+.contact {
+  background-color: #f3c7d5;
+  border-bottom: solid 3px #C92C60;
+  border-top: solid 3px #C92C60; }
+  .contact .contact-links {
+    font-size: 1.2em;
+    text-align: center;
+    padding: 2% 0; }
+
+.address address,
+.address h3 {
+  text-align: center; }
+.address address {
+  font-size: 1.2em; }
+
+.cv {
+  text-align: center; }
+  .cv .img-cv img {
+    display: block;
+    margin: 0 auto;
+    width: 150px; }
+
+.title-cv {
+  margin-bottom: 18px;
+  padding: 8px 0 8px 0; }
+
+.experiences {
+  margin-bottom: 18px; }
+  .experiences .title-cv {
+    font-size: 1.9em; }
+  .experiences .text-experiences {
+    font-size: 1.15em; }
+
+@media only screen and (min-width: 768px) {
+  .welcome-screen {
+    margin-bottom: 26px;
+    margin-top: -15px;
+    padding: 15px 0 20px 0; }
+
+  .about-us {
+    margin-bottom: 26px;
+    padding: 0 0 25px 0; }
+
+  .team {
+    margin-bottom: 26px;
+    padding: 20px 0; }
+
+  .gallery {
+    margin-bottom: 26px;
+    padding: 20px 0; }
+
+  .contact {
+    margin-bottom: 26px;
+    padding: 20px 0; }
+    .contact .contact-links {
+      text-align: left; }
+
+  .address address,
+  .address h3 {
+    text-align: left;
+    padding: 0 10%; }
+
+  .fancy {
+    margin-bottom: 18px;
+    padding: 10px 0 32px 0;
+    text-align: center; }
+
+  .fancy span {
+    display: inline-block;
+    font-family: 'Kreon', serif;
+    font-size: 1.25em;
+    position: relative; }
+
+  .fancy span:before,
+  .fancy span:after {
+    content: "";
+    position: absolute;
+    border-bottom: 1px solid #C92C60;
+    border-top: 1px solid #C92C60;
+    top: 3px;
+    padding: 6px;
+    width: 30%;
+    top: 16px; }
+
+  .fancy span:before {
+    right: 100%;
+    margin-right: 15px; }
+
+  .fancy span:after {
+    left: 100%;
+    margin-left: 15px; }
+
+  .title-cv {
+    margin-bottom: 18px;
+    padding: 8px 0 8px 0; }
+    .title-cv span {
+      display: inline-block;
+      font-family: 'Kreon', serif;
+      font-size: 1.25em;
+      position: relative; }
+      .title-cv span:after {
+        content: "";
+        position: absolute;
+        border-bottom: 3px solid #C92C60;
+        top: 3px;
+        padding: 2px;
+        width: 100%;
+        top: 16px;
+        left: 100%;
+        margin-left: 15px; }
+
+  .experiences .title-cv {
+    font-size: 2em; } }
+
+/*# sourceMappingURL=style.css.map */

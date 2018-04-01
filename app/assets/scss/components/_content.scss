@@ -1,0 +1,42 @@
+.content {
+    display: flex;
+    flex: 1;
+    margin: 0 16px;
+}
+
+.columns {
+    display: block;
+    flex: 1;
+    @media screen and (min-width: 768px) {
+        display: flex;
+    }
+}
+
+.main {
+    background: #fdfdfd;
+    flex: 1;
+    margin: 8px 0;
+    padding: 16px;
+    order: 2;
+    max-width: 100vw;
+    @media screen and (min-width: 768px) {
+        display: initial;
+        margin: 8px;
+    }
+    @media screen and (min-width: 1024px) {
+        display: initial;
+        margin: 16px;
+    }
+}
+
+.sidebar-second {
+    display: none;
+    padding: 16px;
+    order: 3;
+    width: 100%;
+    @media screen and (min-width: 1024px) {
+        display: initial;
+        margin: 16px 0;
+        width: 15%;
+    }
+}

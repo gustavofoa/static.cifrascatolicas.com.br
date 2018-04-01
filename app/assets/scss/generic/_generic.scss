@@ -1,0 +1,23 @@
+//é onde colocamos resets, box-sizing, etc.
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+}
+
+html,
+body {
+    height: 100%;
+    min-height: 100%;
+}
+
+body {
+    background-color: #FFF;
+    min-width: 320px;
+}
+
+.bgGray {
+    background-color : #f1f1f1;;
+}

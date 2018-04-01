@@ -1,0 +1,33 @@
+.info {
+    padding: 18px 0;
+    text-align: center;
+    
+    .row {
+        margin-right: 0;
+        margin-left: 0;
+    }
+
+    .subtitle {
+        color : darken($branco, 30%);
+        font-style: italic;
+    }
+
+    .title {
+        color : #000;
+        font-size: 1.3em;
+        font-weight: bold;
+    }
+
+    .text-separator {
+        border: 0;
+        border-top: 4px solid $azul-escuro;
+        display: block;
+        margin: 20px auto;
+        width: 60%;
+    }
+
+    .description{
+        color : darken($branco, 30%);
+    }
+
+}

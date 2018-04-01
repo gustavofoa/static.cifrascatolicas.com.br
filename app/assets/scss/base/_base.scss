@@ -1,0 +1,38 @@
+// estilos para os headings h1-h6, blockquotes, a, buttons, etc
+
+main {
+    font-family: $font;
+    min-height: calc(100vh - 130px);
+    position: relative;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input {
+    background: none;
+    border: none;
+
+    &:focus,
+    &:active {
+        outline: 0;
+    }
+}
+
+.title {
+    color: #424242;
+    font-size: 1.5em;
+}
+
+.subtitle {
+    color: #3d76d3;
+    font-size: 1.2em;
+    margin: 0 0 16px;
+}
