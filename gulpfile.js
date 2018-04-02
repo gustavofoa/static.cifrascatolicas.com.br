@@ -1,5 +1,6 @@
 var gulp         = require('gulp'),
     connect      = require('gulp-connect'),
+    path         = require("path"),
     // SASS
     sass         = require('gulp-sass'),
     sourcemaps   = require('gulp-sourcemaps'),
@@ -13,12 +14,15 @@ var gulp         = require('gulp'),
     htmlmin      = require('gulp-htmlmin'),
     imagemin     = require('gulp-imagemin'),
     gulpSequence = require('gulp-sequence'),
-    clean        = require('gulp-clean');
+    clean        = require('gulp-clean'),
+    // NUNJUCKS
+    nunjucks     = require('gulp-nunjucks'),
+    data         = require('gulp-data');
 
 // PATHS SRC
 var paths = {
-    html: {
-        input:      'app/**/*.html'
+    htmlTemplates: {
+        input:      'app/templates/[^base]*.html'
     },
     sass: {
         input:      'app/assets/scss/**/*.scss',
@@ -58,7 +62,11 @@ gulp.task('connect', function() {
 
 // HTML
 gulp.task("html", function() {
-    gulp.src(paths.html.input)
+    gulp.src(paths.htmlTemplates.input)
+        .pipe(data(function(file) {
+          return require('./sample-data/' + path.basename(file.path, path.extname(file.path)) + '.json');
+        }))
+        .pipe(nunjucks.compile())
         .pipe(htmlmin({
             collapseWhitespace: true
         }))
@@ -120,11 +128,11 @@ gulp.task('cleanAll', function () {
 
 // WATCH
 gulp.task('watch', function () {
-    gulp.watch(paths.html.input,    ['html']);
+    gulp.watch(paths.htmlTemplates.input,    ['html']);
     gulp.watch(paths.sass.input,    ['sass']);
     gulp.watch(paths.js.input,      ['js']);
     gulp.watch(paths.livereload.input, ['livereload']);
 });
 
-gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html','libs','watch','js', 'fonts', 'imagemin'));
-gulp.task("build", gulpSequence('cleanAll', 'sass', 'html','libs','js', 'fonts', 'imagemin'));
+gulp.task("default", gulpSequence('cleanAll', 'connect', 'sass', 'html', 'libs', 'watch', 'js', 'fonts', 'imagemin'));
+gulp.task("build", gulpSequence('cleanAll', 'sass', 'html', 'libs', 'js', 'fonts', 'imagemin'));

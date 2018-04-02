@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="{{ STATICPATH }}/assets/img/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="{{ STATICPATH }}/assets/img/favicon.ico" type="image/x-icon">
+    <link href="{{ STATICPATH }}/lib/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ STATICPATH }}/assets/css/style.css">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    {% block head %}{% endblock %}
+
+</head>
+
+<body>
+
+{% include "partial/header.html" %}
+
+{% include "partial/adsense/banner-top.html" %}
+
+<main>
+    {% block content %}{% endblock %}
+</main>
+
+{% include "partial/adsense/banner-bottom.html" %}
+
+{% include "partial/footer.html" %}
+
+
+</body>
+
+</html>

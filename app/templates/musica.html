@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>CifrasCatólicas - {{ musica.titulo }}</title>
+{% endblock %}
+
+
+{% block content %}
+
+		<section class="content">
+			<div class="columns">
+
+				<aside class="sidebar-first">
+					{% include 'partial/musica-sidebar.html' %}
+				</aside>
+
+				<main class="main">
+					<h1 class="title">{{ musica.titulo }}</h1>
+					<h2 class="subtitle"><a href="/{{ musica.artista.slug }}">{{ musica.artista.nome }}</a></h2>
+					<pre>{{ musica.cifra | safe }}</pre>
+				</main>
+
+				<aside class="sidebar-second">
+					{% include 'partial/sidebar.html' %}
+				</aside>
+
+			</div>
+		</section>
+
+{% endblock %}
