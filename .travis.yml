@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - node
+script:
+  - gulp build
 deploy:
     provider: s3
     access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
@@ -8,7 +10,7 @@ deploy:
     bucket: static.cifrascatolicas.com.br
     region: sa-east-1
     skip_cleanup: true
-    local-dir: output
+    local-dir: build
     acl: public_read
     detect_encoding: true
 notifications:
