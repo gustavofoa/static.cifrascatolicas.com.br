@@ -26,14 +26,44 @@
     .cifra-options {
         display: flex;
         flex-flow: row wrap;
+        font-size: 10px;
         .option {
             border: 1px solid #c9c9c9;
             border-radius: 5px;
-            font-size: 10px;
+            display: flex;
+            justify-content: space-between;
             margin: 8px 0;
-            padding: 8px;
+            text-align: center;
             width: 100px;
+
+            &:hover {
+                border-color: orangered;
+            }
         }
+        .type-option {
+            display: block;
+            font-size: 10px;
+            margin: auto;
+            padding: 8px;
+        }
+
+        .option-before {
+            border-right: 1px solid #E0E0E0;
+            padding-right: 5px;
+            padding: 8px;
+        }
+        .option-after {
+            border-left: 1px solid #E0E0E0;
+            padding-left: 5px;
+            padding: 8px;
+        }
+
+        .option-after:hover , .option-before:hover {
+            color: orangered;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
     }
 }
 
