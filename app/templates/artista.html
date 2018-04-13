@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block head %}
+<title>CifrasCatólicas - {{ artista.titulo }}</title>
+{% endblock %}
+
+
+{% block content %}
+
+		<section class="content">
+			<div class="columns">
+
+				<main class="main">
+					<h1 class="title">{{ artista.nome }}</h1>
+				</main>
+
+				<aside class="sidebar-second">
+					{% include 'partial/sidebar.html' %}
+				</aside>
+
+			</div>
+		</section>
+
+{% endblock %}
