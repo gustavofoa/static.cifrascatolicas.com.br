@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block head %}
-<title>CifrasCatólicas - {{ titulo }}</title>
+<title>CifrasCatólicas - Home</title>
 {% endblock %}
 
 
@@ -9,35 +9,17 @@
 <section class="content">
 	<div class="columns">
 
-		<aside class="sidebar-first">
-			<figure>
-				<img src="https://picsum.photos/150/150" alt="">
-			</figure>
-			<div class="cifra-options">
-				<ul>
-					<li class="option">
-						<span class="type-option">Cifra Simplificada</span>
-					</li>
-					<li class="option">
-						<span class="type-option">Auto Rolagem</span>
-					</li>
-					<li class="option">
-						<span class="option-before">-</span>
-						<span class="type-option">Fonte</span>
-						<span class="option-after">+</span>
-					</li>
-				</ul>
-			</div>
-		</aside>
-
 		<main class="main">
 			<h1 class="title">Home</h1>
-			<pre>{{ cifra }}</pre>
+
+			<ul>
+				{%- for artista in artistas %}
+				<li><a href="/{{ artista.slug }}">{{ artista.nome }}</a></li>
+				{% endfor %}
+			</ul>
+
 		</main>
 
-		<aside class="sidebar-second">
-			Sidebar second: Fixed width
-		</aside>
 	</div>
 </section>
 

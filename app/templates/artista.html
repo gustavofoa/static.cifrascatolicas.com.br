@@ -12,6 +12,13 @@
 
 				<main class="main">
 					<h1 class="title">{{ artista.nome }}</h1>
+
+					<ul>
+						{%- for musica in artista.musicas %}
+							<li><a href="/{{ artista.slug }}/{{ musica.slug }}">{{ musica.nome }}</a></li>
+						{% endfor %}
+					</ul>
+
 				</main>
 
 				<aside class="sidebar-second">
