@@ -1,3 +1,19 @@
 {
-  "STATICPATH" : ""
+  "STATICPATH" : "",
+  "artista" : {
+    "slug" : "padre-zezinho",
+    "nome" : "Padre Zezinho",
+    "img" : "https://picsum.photos/150/150",
+    "info" : "Informações...",
+    "musicas" : [{
+      "slug": "musica-1",
+      "nome": "Música 1"
+    },{
+      "slug": "musica-2",
+      "nome": "Música 2"
+    },{
+      "slug": "musica-3",
+      "nome": "Música 3"
+    }]
+  }
 }
