@@ -1,6 +1,10 @@
 $bg: #f3f3f3;
 $fc: #333;
-
+$topnavh: 60px;
+$botnavh: 40px;
+$navcolour: #fff;
+$navbgcolour: #1976D2;
+$mobnavw: 200px;
 
 .clearfix:before,
 .clearfix:after {
@@ -10,24 +14,41 @@ $fc: #333;
 }
 
 .container {
-    max-width: 1082px;
     position: relative;
     width: calc(100% - 32px);
     margin: 0 auto;
     transition: max-width 0.3s;
+    display: flex;
+    flex-flow: row wrap;
     &:before,
     &:after {
         clear: both;
         content: '';
         display: table;
     }
-}
-
-@media screen and (max-width: 1050px) {
-    .container {
+    @media screen and (max-width: 1050px) {
         max-width: 768px;
     }
+
+    .feature-button {
+        align-self: center;
+        background-color: #fff;
+        border: 2px solid #fff;
+        border-radius: 0.2em;
+        color: #000;
+        cursor: pointer;
+        font-size: 14px;
+        height: 35px;
+        margin: 0 auto;
+        max-width: 480px;
+        padding: 10px;
+        width: 100%;
+        &:focus {
+            box-shadow: 0 0 1px 1px lightblue;
+        }
+    }
 }
+
 
 .waves-effect.waves-white .waves-ripple {
     background-color: rgba(255, 255, 255, 0.3);
@@ -41,10 +62,6 @@ $fc: #333;
     // left: 200vw;
 }
 
-$topnavh: 60px;
-$botnavh: 40px;
-$navcolour: #fff;
-$navbgcolour: #1976D2;
 nav {
     position: relative;
     width: 100%;
@@ -72,27 +89,6 @@ nav {
             .logo {
                 margin: 0 0 0 16px;
                 font-size: 20px;
-            }
-            .feature-button {
-                background-color: #fff;
-                border: 2px solid #fff;
-                border-radius: 0.2em;
-                color: #000;
-                cursor: pointer;
-                font-size: 14px;
-                height: 34px;
-                line-height: normal;
-                line-height: calc(34px - 4px);
-                padding: 0 10px;
-                position: absolute;
-                right: 16px;
-                top: 50%;
-                transform: translate3d(0, -50%, 0);
-                transition: box-shadow 0.3s;
-                text-decoration: none;
-                &:focus {
-                    box-shadow: 0 0 1px 1px lightblue;
-                }
             }
         }
         .bottom {
@@ -152,7 +148,6 @@ nav {
     }
 }
 
-$mobnavw: 200px;
 @media screen and (max-width: 768px) {
     nav .fixed-nav {
         height: $topnavh;
@@ -201,6 +196,11 @@ $mobnavw: 200px;
                 margin-left: 0;
             }
             .feature-button {
+                background-color: #fff;
+                border: 2px solid #fff;
+                border-radius: 0.2em;
+                cursor: pointer;
+                position: absolute;
                 right: auto;
                 top: calc(100% + 16px);
                 left: calc(#{$mobnavw / 2} - 14px);
@@ -274,81 +274,3 @@ $mobnavw: 200px;
     }
 }
 
-@media screen and (min-width: 768px) {
-    .feature-button {
-        position: relative;
-    }
-}
-
-// .navbar {
-//     align-items: center;
-//     background-color: #eeeeee;
-//     border-bottom: 1px solid #444;
-//     border-top: 3px solid #2b4961;
-//     box-shadow: 0 0 1px 1px #e0e0e0;
-//     display: flex;
-//     height: 60px;    
-//     .navbar-menu {
-//         align-items: center;
-//         display: flex;
-//         list-style-type: none;
-//         margin: 0;
-//         overflow: hidden;
-//         padding: 0;
-//     }
-//     .menu-icon {
-//         border-right: 1px solid #4D4D4D;
-//         &:hover {
-//             background-color: #424242;
-//         }
-//     }
-//     .menu-item {
-//         .item {
-//             display: block;
-//             color: #424242;
-//             padding: 10px 20px;
-//             text-align: center;
-//             text-decoration: none;
-//         }
-//     }
-//     .item-name {
-//         display: none;
-//         @media screen and (min-width: 768px) {
-//             display: initial;
-//         }
-//     }
-//     .header-field {
-//         margin: auto;
-//         max-width: 300px;
-//         width: 100%;
-//         padding: 0 20px;
-//         @media screen and (min-width: 768px) {
-//             margin-left: 100px;
-//             padding: 0;
-//         }
-//         @media screen and (min-width: 1024px) {
-//             margin-left: 300px;
-//             padding: 0;
-//         }
-//         .icon-find {
-//             color: #000000;
-//             margin: 7px 12px;
-//             position: absolute;
-//             z-index: 2;
-//         }
-//         .header-search {
-//             background-color: #F5F5F5;
-//             border-radius: 20px;
-//             border: 1px solid #BDBDBD;
-//             color: #000000;
-//             height: 30px;
-//             padding: 0 40px;
-//             transition: box-shadow ease 0.9s;
-//             width: 100%;
-//             &:focus {
-//                 box-shadow: 0px 0px 5px 2px #03a9f4;
-//                 outline: none;
-//             }
-//         }
-//     }
-// }
