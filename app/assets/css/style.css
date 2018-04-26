@@ -97,6 +97,9 @@ h4 {
 p,
 a,
 span,
+b {
+  color: #861d40;
+}
 address {
   font-family: 'Roboto', sans-serif; }
 
