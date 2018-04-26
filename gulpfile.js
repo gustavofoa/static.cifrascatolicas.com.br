@@ -48,7 +48,7 @@ var paths = {
         output:     'build/assets/img/'
     },
     livereload: {
-        input:      ['app/**/*.html', 'app/**/*.js', 'app/**/*.scss']
+        input:      ['app/**/*.html', 'app/**/*.js', 'app/**/*.scss', 'app/**/*.html']
     },
     outputGeneral: 'build'
 };
