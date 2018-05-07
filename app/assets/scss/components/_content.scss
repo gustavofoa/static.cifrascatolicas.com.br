@@ -5,23 +5,23 @@
 }
 
 .columns {
-    display: block;
     flex: 1;
+    display: flex;
+    flex-flow: row wrap;
     @media screen and (min-width: 768px) {
         display: flex;
     }
 }
 
-.main {
+.main-music {
     background: #fdfdfd;
     flex: 1;
-    margin: 8px 0;
-    padding: 16px;
-    order: 2;
     max-width: 100vw;
+    padding: 0 16px 0 0;
+    order: 2;
     @media screen and (min-width: 768px) {
         display: initial;
-        margin: 8px;
+        margin: 8px 0 8px 64px;
     }
     @media screen and (min-width: 1024px) {
         display: initial;
