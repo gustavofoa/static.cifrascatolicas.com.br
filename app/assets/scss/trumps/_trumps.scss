@@ -17,3 +17,10 @@
         text-decoration: none;
     }
 }
+
+.only-xs {
+    display: block;
+    @media (min-width: 768px) {
+        display: none;
+    }
+}

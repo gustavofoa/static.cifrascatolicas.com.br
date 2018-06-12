@@ -1,23 +1,32 @@
 <figure>
     <img src="{{ musica.artista.img }}" alt="">
 </figure>
+
 <div class="cifra-options">
-    <ul>
-        <li class="option">
-            <span class="type-option">Auto Rolagem</span>
-        </li>
-        <li class="option">
-            <span class="option-before">-</span>
-            <span class="type-option">Fonte</span>
-            <span class="option-after">+</span>
-        </li>
-        <li class="option">
-            <span class="option-before">-</span>
-            <span class="type-option">½ Tom</span>
-            <span class="option-after">+</span>
-        </li>
-        <li class="option">
-            <span class="type-option">Imprimir</span>
-        </li>
-    </ul>
+    <div class="options-content">
+        <button id="js-btnOptions" class="fab-button only-xs" onclick="showOptions()">
+            <svg class="icon icon-plus">
+                <use xlink:href="#icon-plus"></use>
+            </svg>
+        </button>
+
+        <ul id="js-showOptions" class="list-option">
+            <li class="option">
+                <span class="type-option">Auto Rolagem</span>
+            </li>
+            <li class="option">
+                <span class="option-before">-</span>
+                <span class="type-option">Fonte</span>
+                <span class="option-after">+</span>
+            </li>
+            <li class="option">
+                <span class="option-before">-</span>
+                <span class="type-option">½ Tom</span>
+                <span class="option-after">+</span>
+            </li>
+            <li class="option">
+                <a href="www.google.com.br"></a>
+            </li>
+        </ul>
+    </div>
 </div>
