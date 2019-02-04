@@ -1,18 +1,17 @@
-language: node_js
-node_js:
-  - "4"
-script:
-  - gulp build
+lang: ruby
+before_script:
+  # workaround to fix rake not found
+  - gem install rake
 deploy:
-    provider: s3
-    access_key_id: $AWS_ACCESS_KEY # declared in Travis repo settings
-    secret_access_key: $AWS_SECRET_KEY
-    bucket: static.cifrascatolicas.com.br
-    region: sa-east-1
-    skip_cleanup: true
-    local-dir: build
-    acl: public_read
-    detect_encoding: true
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY
+  secret_access_key: $AWS_SECRET_KEY
+  bucket: "static.cifrascatolicas.com.br"
+  region: sa-east-1
+  skip_cleanup: true
+  acl: public_read
+  cache_control: "max-age=31536000"
+  expires: "2099-12-31 00:00:00 -0000"
 notifications:
-    email:
-        on_failure: always
+  email:
+    on_failure: always
